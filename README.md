@@ -3,7 +3,7 @@
 To see the dashboard in action, you can use the live link below:
 
 * **Link to test:** [https://dashboard-tickets-azure.vercel.app/](https://dashboard-tickets-azure.vercel.app/)
-* **Test Data:** Use the `simulacao_tickets_atendimento.csv` file available in this repository to test the link above.
+* **Test Data:** Use the [simulacao_tickets_atendimento.csv](./simulacao_tickets_atendimento.csv) file available in this repository to test the link above.
 
 **Customer Support Intelligence: A Real-World Problem-Solving Case Study (2017 Simulation)**
 
