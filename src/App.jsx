@@ -57,8 +57,8 @@ const parseCSV = (text) => {
 };
 
 const COLORS = [
-  '#4f46e5',
-  '#10b981',
+  '#4208af',
+  '#1e8a76',
   '#f59e0b',
   '#ef4444',
   '#8b5cf6',
@@ -239,18 +239,21 @@ const App = () => {
   return (
     <div className="min-h-screen bg-slate-50 p-4 md:p-8 font-sans text-slate-900">
       <header className="max-w-7xl mx-auto mb-10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <h1 className="text-4xl font-black text-slate-800 flex items-center gap-3">
-            <LayoutDashboard className="text-indigo-600 w-10 h-10" />{' '}
-            Atendimento Intelligence
-          </h1>
-          <p className="text-slate-500 font-medium">
-            Análise estratégica de tickets e performance financeira{' '}
-            {fileName && `| ${fileName}`}
-          </p>
+        <div className="flex items-center gap-4">
+          <img src="/Logo Positiva.svg" alt="sonata.cx" className="h-10 w-auto" />
+          <div>
+            <h1 className="text-2xl font-black text-slate-800 flex items-center gap-2">
+              <LayoutDashboard className="text-[#4208af] w-7 h-7" />{' '}
+              Atendimento Intelligence
+            </h1>
+            <p className="text-slate-500 font-medium text-sm">
+              Análise estratégica de tickets e performance financeira{' '}
+              {fileName && `| ${fileName}`}
+            </p>
+          </div>
         </div>
 
-        <label className="flex items-center gap-3 px-6 py-3 bg-indigo-600 text-white rounded-xl cursor-pointer hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-200">
+        <label className="flex items-center gap-3 px-6 py-3 bg-[#4208af] text-white rounded-xl cursor-pointer hover:bg-[#350a8a] transition-all shadow-lg hover:shadow-[#c4a0f8]">
           <Upload size={20} />
           <span className="font-bold">Subir Planilha CSV</span>
           <input
@@ -278,7 +281,7 @@ const App = () => {
               <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
                 Impacto Financeiro
               </p>
-              <h3 className="text-3xl font-black text-indigo-600">
+              <h3 className="text-3xl font-black text-[#4208af]">
                 R${' '}
                 {stats.totalValueAll.toLocaleString('pt-BR', {
                   minimumFractionDigits: 2,
@@ -309,7 +312,7 @@ const App = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
               <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-                <BarChart3 size={20} className="text-indigo-500" /> Chamados por
+                <BarChart3 size={20} className="text-[#534794]" /> Chamados por
                 Faixa de Valor
               </h3>
               <div className="h-80">
@@ -331,10 +334,10 @@ const App = () => {
                       }}
                     />
                     <Legend />
-                    <Bar dataKey="0,1-30" stackId="a" fill="#6366f1" />
-                    <Bar dataKey="30,01-50" stackId="a" fill="#818cf8" />
-                    <Bar dataKey="50,01-80" stackId="a" fill="#a5b4fc" />
-                    <Bar dataKey="80,01-100" stackId="a" fill="#c7d2fe" />
+                    <Bar dataKey="0,1-30" stackId="a" fill="#534794" />
+                    <Bar dataKey="30,01-50" stackId="a" fill="#534794" />
+                    <Bar dataKey="50,01-80" stackId="a" fill="#9b7fe8" />
+                    <Bar dataKey="80,01-100" stackId="a" fill="#d9d7df" />
                     <Bar dataKey="100,01-200" stackId="a" fill="#fbbf24" />
                     <Bar dataKey=">200" stackId="a" fill="#f43f5e" />
                   </BarChart>
@@ -390,7 +393,7 @@ const App = () => {
                     <YAxis
                       yAxisId="left"
                       orientation="left"
-                      stroke="#6366f1"
+                      stroke="#534794"
                       axisLine={false}
                       tickLine={false}
                     />
@@ -406,7 +409,7 @@ const App = () => {
                     <Bar
                       yAxisId="left"
                       dataKey="value"
-                      fill="#6366f1"
+                      fill="#534794"
                       radius={[4, 4, 0, 0]}
                       name="Valor (R$)"
                     />
@@ -449,9 +452,9 @@ const App = () => {
                     <Line
                       type="monotone"
                       dataKey="Total"
-                      stroke="#6366f1"
+                      stroke="#534794"
                       strokeWidth={4}
-                      dot={{ r: 6, fill: '#6366f1' }}
+                      dot={{ r: 6, fill: '#534794' }}
                       activeDot={{ r: 8 }}
                     />
                     <Line
